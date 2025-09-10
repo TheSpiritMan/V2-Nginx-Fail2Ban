@@ -1,0 +1,25 @@
+[DEFAULT]
+# Use nftables
+banaction = nftables-multiport
+ignoreip  = 127.0.0.1/8 ::1/128
+
+# Global defaults
+bantime   = 1h       # Ban for 1 hour
+findtime  = 10m      # Look at last 10 minutes
+maxretry  = 3        # 3 failures → ban
+
+[sshd]
+enabled  = true
+port     = ssh
+logpath  = /var/log/auth.log
+backend  = systemd
+maxretry = 5
+findtime = 10m
+bantime  = 1h
+
+[nginx-http-auth]
+enabled  = true
+port     = http,https
+logpath  = /var/log/nginx/error.log
+backend  = polling
+maxretry = 3
