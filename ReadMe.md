@@ -141,7 +141,7 @@ systemctl restart nftables
 ```
 
 ## Verify Fail2ban
-- Visit Nginx Default Page. For me, my server IP is `157.245.99.93`.`
+- Visit Nginx Default Page. For me, my server IP is `157.245.99.93`.
 - Open Link: http://157.245.99.93
  <img src="./assets/nginx-basic-auth.png">
 - We can try login with correct credentials.
