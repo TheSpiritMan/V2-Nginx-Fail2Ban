@@ -1,6 +1,6 @@
 # Nginx Fail2Ban with nftables
 
-## Ubuntu 24
+## Ubuntu 22.04
 ### Install Nginx, Fail2ban, nftables
 - Command:
     ```sh
